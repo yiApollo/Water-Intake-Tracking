@@ -1,28 +1,29 @@
-# Water Intake Tracker
+# Water Intake Tracker (Docker Compose)
 
-A simple and modern water intake tracker built with React. Set your daily water goal, log your intake, and track your progress visually.
+A fullstack water intake tracker with React frontend, Node.js/Express backend, and PostgreSQL database. All services run with Docker Compose.
 
 ## Features
 - Set and persist your daily water target
 - Add water portions with one click (cup, bottle, or custom amount)
 - Responsive and mobile-friendly UI
-- All data is stored locally in your browser (no backend or database required)
+- Data is stored in PostgreSQL via the backend API
 
 ## Getting Started
 
-1. Install dependencies:
+1. Make sure you have Docker and Docker Compose installed.
+2. Run:
    ```sh
-   npm install
-   ```
-2. Start the development server:
-   ```sh
-   npm run dev
+   docker-compose up --build
    ```
 3. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:4000
+- Database: PostgreSQL on port 5432
+
 ## Customization
 - You can change the default daily target in `src/App.jsx` (`DEFAULT_WATER_TARGET`).
-- All intake and target data is saved in your browser's localStorage.
+- Environment variables can be set in `docker-compose.yml`.
 
 ## License
 MIT
