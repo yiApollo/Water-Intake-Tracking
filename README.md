@@ -1,3 +1,6 @@
+![Main Screen](./screenshot-main.png)
+![Custom Portion Popup](./screenshot-popup.png)
+
 # Water Intake Tracker (Docker Compose)
 
 A fullstack water intake tracker with React frontend, Node.js/Express backend, and PostgreSQL database. All services run with Docker Compose.
