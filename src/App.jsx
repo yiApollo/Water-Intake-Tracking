@@ -20,13 +20,13 @@ function App() {
   const [editingTarget, setEditingTarget] = useState(false);
   const [showCustom, setShowCustom] = useState(false);
 
-  // Carrega meta salva do localStorage
+  // Load saved target from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('waterTarget');
     if (saved) setWaterTarget(Number(saved));
   }, []);
 
-  // Salva meta no localStorage sempre que mudar
+  // Save target to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('waterTarget', waterTarget);
   }, [waterTarget]);
@@ -94,7 +94,7 @@ function App() {
             <span role="img" aria-label="cup">🥤</span> CUP {CUP_ML}ml
           </button>
           <button className="portion-btn" onClick={() => handleAdd(BOTTLE_ML)}>
-            <span role="img" aria-label="bottle">🫙</span> BOTTLE {BOTTLE_ML}ml
+            <span role="img" aria-label="bottle">🍼</span> BOTTLE {BOTTLE_ML}ml
           </button>
           <button className="portion-btn special" onClick={() => setShowCustom(v => !v)}>
             <span role="img" aria-label="other">💧</span> SOMETHING ELSE
